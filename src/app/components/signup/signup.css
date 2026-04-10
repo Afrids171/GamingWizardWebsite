@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #111;
+    color: orange;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    flex-wrap: wrap;
+}
+
+/* Logo */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#GameWizard
+{
+    list-style-type: none;
+    color: orange;
+    text-decoration: none;
+}
+
+.country {
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+/* Nav Links */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: orange;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+/* Auth Buttons */
+.auth-links {
+    display: flex;
+    gap: 15px;
+}
+
+.login-btn,
+.signup-btn {
+    text-decoration: none;
+    color: orange;
+    padding: 6px 15px;
+    border: 1px solid orange;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.signup-btn {
+    background-color: orange;
+    color: black;
+}
+
+.login-btn:hover {
+    background-color: orange;
+    color: black;
+}
+
+.signup-btn:hover {
+    background-color: white;
+}
+
+/* 🔥 Responsive Design */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .auth-links {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
+
+.signup-wrapper {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #111, #1a1a1a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.signup-card {
+    background-color: #1f1f1f;
+    padding: 35px;
+    width: 400px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px rgba(255, 165, 0, 0.3);
+}
+
+.signup-title {
+    text-align: center;
+    color: orange;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background-color: #2a2a2a;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group textarea {
+    resize: none;
+    height: 70px;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: orange;
+    box-shadow: 0px 0px 8px rgba(255, 165, 0, 0.5);
+}
+
+.signup-btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signup-btn:hover {
+    background-color: white;
+}
+
+.login-text {
+    text-align: center;
+    margin-top: 18px;
+    color: #aaa;
+    font-size: 14px;
+}
+
+.login-text a {
+    color: orange;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-text a:hover {
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 450px) {
+    .signup-card {
+        width: 95%;
+        padding: 25px;
+    }
+}

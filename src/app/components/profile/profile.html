@@ -1,0 +1,111 @@
+<div class="navbar">
+
+    <div class="logo">
+        <a routerLink="" id="GameWizard" >🛒 Game Wizard</a>
+        <span class="country">INDIA</span>
+    </div>
+
+    <div class="nav-links">
+        <a routerLink="/">Home</a>
+        <a routerLink="/console">Gaming Console</a>
+        <a routerLink="/games">Games</a>
+        <a routerLink="/about">About Us</a>
+    </div>
+
+    <div class="auth-links">
+        @if( isProfile == false){
+        <a routerLink="/login" class="login-btn  hidden-auth">Login</a>
+        <a routerLink="/signup" class="signup-btn  hidden-auth">Signup</a>
+        }
+        @else{
+        <a routerLink="/login" class="login-btn" (click)="logout()">LogOut</a>
+        }
+        
+        <p style="color: whitesmoke; padding: 10px;">Welcome....  {{userName}}   </p>
+    </div>
+
+
+
+
+
+</div>
+<hr>
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2 class="logo">🎮 Game Wizard</h2>
+
+        <ul>
+            <li class="active">Personal Details</li>
+            <li>My Orders</li>
+            <li>Order History</li>
+            <li>Logout</li>
+        </ul>
+    </div>
+
+
+    <!-- Main Content -->
+    <div class="content">
+
+        <!-- Personal Details -->
+        <section class="profile-section">
+            <h2>Personal Details</h2>
+
+          
+             <div class="profile-card">
+                <p><strong>Name:</strong> {{customerData.fullName}}</p>
+                <p><strong>Email:</strong> {{customerData.email}}</p>
+                <p><strong>Phone:</strong> {{customerData.phoneNumber}}</p>
+                <p><strong>Address:</strong> {{customerData.address}}</p>
+            </div>
+           
+            
+        </section>
+
+
+        <!-- Current Orders -->
+        <section class="orders-section">
+            <h2>My Orders</h2>
+
+            <div class="order-card">
+                <h3>PlayStation 5</h3>
+            <button (click)="viewImage()">View Image</button>
+                <p>Status: <span class="processing">Processing</span></p>
+                <p>Price: ₹45,000</p>
+            </div>
+
+            <div class="order-card">
+                <h3>PS4 Controller</h3>
+                <p>Status: <span class="shipped">Shipped</span></p>
+                <p>Price: ₹4,500</p>
+            </div>
+        </section>
+
+
+        <!-- Order History -->
+        <section class="history-section">
+            <h2>Order History</h2>
+
+            <div class="order-history">
+                <p>✔ PS4 Pro — Delivered</p>
+                <p>✔ FIFA 23 CD — Delivered</p>
+            </div>
+        </section>
+
+    </div>
+
+</div>
+<div>
+
+@for(product of ProductData(); track product.productId)
+{
+    <h5>Product Name : {{product.productName}}</h5>
+    <h5>Brand : {{product.brand}}</h5>
+    <h5>Stock Quantity : {{product.stockQuantity}}</h5>
+    <img [src]="product.imageUrl" width="150">
+    <hr>    
+    
+}
+
+</div>

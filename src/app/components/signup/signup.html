@@ -1,0 +1,73 @@
+<div class="navbar">
+
+    <div class="logo">
+        <a routerLink="" id="GameWizard" >🛒 Game Wizard</a>
+        <span class="country">INDIA</span>
+    </div>
+
+    <div class="nav-links">
+        <a routerLink="/">Home</a>
+        <a routerLink="/console">Gaming Console</a>
+        <a routerLink="/games">Games</a>
+        <a routerLink="/about">About Us</a>
+    </div>
+
+    <div class="auth-links">
+        @if( isProfile == false){
+        <a routerLink="/login" class="login-btn">Login</a>
+        <a routerLink="/signup" class="signup-btn">Signup</a>
+        }
+        @else{
+        <a href="" class="login-btn">&#128100;Profile</a>
+        }
+    </div>
+
+
+
+</div>
+<hr>
+
+
+<div class="signup-wrapper">
+
+    <div class="signup-card">
+        <h2 class="signup-title">Create Your Account 🎮</h2>
+
+        <form>
+
+            <div class="input-group">
+                <label>Name</label>
+                <input type="text" [formControl]="fullName" name="fullName" placeholder="Enter your full name">
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email"  [formControl]="email" name="email" placeholder="Enter your email">
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" [formControl]="password" name="password" placeholder="Create password">
+            </div>
+
+            <div class="input-group">
+                <label>Phone Number</label>
+                <input type="tel"  [formControl]="phoneNumber" name="phoneNumber"  placeholder="Enter your phone number">
+            </div>
+
+            <div class="input-group">
+                <label>Address</label>
+                <textarea  [formControl]="address" name="address" placeholder="Enter your address"></textarea>
+            </div>
+
+            <button type="button" (click)="SignUpBtn()" class="signup-btn">Sign Up</button>
+
+            <p class="login-text">
+                Already have an account?
+                <a routerLink="/login">Login</a>
+            </p>
+
+        </form>
+    </div>
+
+</div>

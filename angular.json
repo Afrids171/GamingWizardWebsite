@@ -2,7 +2,8 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "27c4e23e-ac46-4cdf-b370-c51a58c2567b"
   },
   "newProjectRoot": "projects",
   "projects": {
@@ -20,11 +21,14 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
+
                 "glob": "**/*",
                 "input": "public"
+                
               }
             ],
             "styles": [
+                "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
               "src/styles.css"
             ],
             "server": "src/main.server.ts",

@@ -1,0 +1,41 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class UserService {
+
+  constructor(private http: HttpClient) { }
+  POSTURL = "https://localhost:7257/api/Home/SignUp"
+  loginURL = "https://localhost:7257/api/Home/Login"
+  CustomerDetails = "https://localhost:7257/api/Home"
+  customerbyid = "https://localhost:7257/api/Home/id?id="
+
+
+
+  isProfile = false;
+  IsLogin = false;
+  CreateUser(obj: any) {
+    return this.http.post<any>(this.POSTURL, obj)
+  }
+
+
+  loginUser(obj: any) {
+    return this.http.post<any>(this.loginURL, obj)
+  }
+
+  getallproducts() {
+    return this.http.get<any>("https://localhost:7257/api/Home/AllProducts")
+  }
+
+  getCustomerDetails() {
+    return this.http.get<any>(this.CustomerDetails);
+
+  }
+
+  getCustomerById(id: number) {
+    return this.http.get<any>(`${this.customerbyid}${id}`);
+  }
+  
+}

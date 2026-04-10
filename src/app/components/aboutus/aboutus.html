@@ -1,0 +1,110 @@
+<div class="navbar">
+
+    <div class="logo">
+        <a routerLink="" id="GameWizard" >🛒 Game Wizard</a>
+        <span class="country">INDIA</span>
+    </div>
+
+    <div class="nav-links">
+        <a routerLink="/">Home</a>
+        <a routerLink="/console">Gaming Console</a>
+        <a routerLink="/games">Games</a>
+        <a routerLink="/about">About Us</a>
+    </div>
+
+    <div class="auth-links">
+        @if(isProfile == false){
+        <a routerLink="/login" class="login-btn">Login</a>
+        <a routerLink="/signup" class="signup-btn">Signup</a>
+        }
+        @else{
+        <a routerLink="/profile" class="login-btn">&#128100;Profile</a>
+        }
+        <button routerLink="/addtocart" class="login-btn">&#128722;Cart</button>
+    </div>
+
+
+
+</div>
+<hr>
+
+<div class="about-container">
+
+    <section class="about-hero">
+        <h1>About Game Wizard 🎮</h1>
+        <p>Your Trusted Destination for Pre-Owned & New Gaming Consoles in Vashi</p>
+    </section>
+
+    <section class="about-content">
+        <div class="about-text">
+            <h2>Who We Are</h2>
+            <p>
+                Game Wizard is a passionate gaming store located in Vashi, Navi Mumbai.
+                We specialize in selling high-quality pre-owned and brand-new gaming consoles
+                including PlayStation 5, PlayStation 4, and accessories.
+            </p>
+        </div>
+
+        <div class="about-text">
+            <h2>Our Mission</h2>
+            <p>
+                Our mission is to make gaming affordable and accessible for everyone.
+                We ensure every console is tested, verified, and delivered with care.
+            </p>
+        </div>
+
+        <div class="about-text">
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li>✔ 100% Tested Pre-Owned Consoles</li>
+                <li>✔ Affordable Pricing</li>
+                <li>✔ Trusted Local Seller in Vashi</li>
+                <li>✔ Friendly Customer Support</li>
+            </ul>
+        </div>
+    </section>
+
+<section class="social-section">
+    <h2 class="social-title">Connect With Us</h2>
+
+    <div class="social-links">
+        <a href="#" class="social-btn facebook">Facebook</a>
+        <a href="#" class="social-btn instagram">Instagram</a>
+        <a href="http://www.youtube.com/@GAMEWIZARDSVASHI" class="social-btn youtube">YouTube</a>
+        <a href="#" class="social-btn whatsapp">WhatsApp</a>
+    </div>
+</section>
+
+</div>
+
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h2 class="logo">GameWizards</h2>
+      <p>Your ultimate destination for the latest gaming consoles in Vashi.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/about">About Us</a></li>
+        <li><a routerLink="/console">Gaming Consoles</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p>📍 Vashi, Navi Mumbai</p>
+      <p>📞 +91 98765 43210</p>
+      <p>✉ gamewizards@gmail.com</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 GameWizards. All Rights Reserved.</p>
+  </div>
+</footer>

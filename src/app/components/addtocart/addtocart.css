@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #111;
+    color: orange;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    flex-wrap: wrap;
+}
+
+/* Logo */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#GameWizard
+{
+    list-style-type: none;
+    color: orange;
+    text-decoration: none;
+}
+
+.country {
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+/* Nav Links */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: orange;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+/* Auth Buttons */
+.auth-links {
+    display: flex;
+    gap: 15px;
+}
+
+.login-btn,
+.signup-btn {
+    text-decoration: none;
+    color: orange;
+    padding: 6px 15px;
+    border: 1px solid orange;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.signup-btn {
+    background-color: orange;
+    color: black;
+}
+
+.login-btn:hover {
+    background-color: orange;
+    color: black;
+}
+
+.signup-btn:hover {
+    background-color: white;
+}
+
+/* 🔥 Responsive Design */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .auth-links {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
+
+
+
+
+
+
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+.cart-page{
+background:#111;
+min-height:100vh;
+padding:40px;
+color:white;
+}
+
+.cart-title{
+text-align:center;
+color:orange;
+margin-bottom:40px;
+}
+
+/* Cart Container */
+
+.cart-container{
+max-width:900px;
+margin:auto;
+}
+
+/* Cart Item */
+
+.cart-item{
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:#1f1f1f;
+padding:20px;
+margin-bottom:20px;
+border-radius:8px;
+}
+
+.cart-img img{
+width:120px;
+}
+
+/* Details */
+
+.cart-details{
+flex:1;
+margin-left:20px;
+}
+
+.cart-details h3{
+margin-bottom:10px;
+}
+
+/* Quantity */
+
+.quantity{
+display:flex;
+align-items:center;
+gap:10px;
+margin-top:10px;
+}
+
+.quantity button{
+width:30px;
+height:30px;
+border:none;
+background:orange;
+color:black;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* Remove */
+
+.remove-btn{
+background:#ff3b3b;
+border:none;
+padding:10px 15px;
+border-radius:5px;
+color:white;
+cursor:pointer;
+}
+
+/* Summary */
+
+.cart-summary{
+max-width:900px;
+margin:30px auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#1a1a1a;
+padding:20px;
+border-radius:8px;
+}
+
+.checkout-btn{
+background:orange;
+border:none;
+padding:12px 20px;
+font-weight:bold;
+border-radius:5px;
+cursor:pointer;
+}
+
+.checkout-btn:hover{
+background:white;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.cart-item{
+flex-direction:column;
+align-items:flex-start;
+gap:15px;
+}
+
+.cart-img img{
+width:100%;
+max-width:200px;
+}
+
+.cart-summary{
+flex-direction:column;
+gap:15px;
+}
+
+}

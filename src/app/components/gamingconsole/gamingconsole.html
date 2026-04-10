@@ -1,0 +1,221 @@
+<div class="navbar">
+
+    <div class="logo">
+        <a routerLink="" id="GameWizard">🛒 Game Wizard</a>
+        <span class="country">INDIA</span>
+    </div>
+
+    <div class="nav-links">
+        <a routerLink="/">Home</a>
+        <a routerLink="/console">Gaming Console</a>
+        <a routerLink="/games">Games</a>
+        <a routerLink="/about">About Us</a>
+    </div>
+
+    <div class="auth-links">
+        @if(isProfile == false){
+        <a routerLink="/login" class="login-btn  ">Login</a>
+        <a routerLink="/signup" class="signup-btn  ">Signup</a>
+        }
+        @else{
+        <a routerLink="/profile" class="login-btn">&#128100;Profile</a>
+        }
+        <button routerLink="/addtocart" class="login-btn">&#128722;Cart</button>
+    </div>
+
+
+
+</div>
+<hr>
+
+
+
+<div class="maindiv">
+
+    <div>
+        <h1 style="text-align: center; color: blue;">Choose Your Pre-Owned Gaming Console &#128521;&#128521;</h1>
+    </div>
+
+
+    <div class="container-1">
+
+        @for(item of allProducts; track item.productId)
+        {
+        <div class="console-1">
+            <div class="img-1">
+                <img [src]="item.imageUrl" alt="Images" height="250px" width="250px">
+            </div>
+            <div class="text-1">
+
+                <p style="font-weight: bold;"> {{item?.productName}}</p>
+                <p>{{item?.description}}</p>
+                @if(isLogin == false)
+                {
+                <button class="btn-2" (click)=showLoginAlert()>Buy Now @{{item.price}}</button>
+                }
+                @else{
+                <button class="btn-2" (click)="addToCart(item)">Buy Now @{{item.price}}</button>
+                }   
+                <h5 style="color: green;">Stock Available Qty : {{item?.stockQuantity}} left!</h5>
+            </div>
+        </div>
+        }
+
+
+        <!-- <div class="console-1">
+            <div class="img-2">
+
+            </div>
+            <div class="text-1">
+                <p>
+                    PS5 Digital Edition - 825GB
+                    Enjoy the same breathtaking immersion and lightning speed from the all-digital PS5 console with no
+                    disc drive. Play your digital game collection, stream from the PlayStation Plus catalogue and
+                    download from PlayStation Store</p>
+                <button class="btn-2">Buy Now</button>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="console-2">
+            <div class="img-3">
+
+            </div>
+            <div class="text-1">
+                <p>
+                    PlayStation®4
+                    Incredible games live on PS4, with 500GB or 1TB storage.
+
+                    Vertical stand sold separately</p>
+                <button class="btn-2">Buy Now</button>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="console-2">
+            <div class="img-4">
+
+            </div>
+            <div class="text-1">
+                <p>
+                    PlayStation®4 Pro
+                    4K-gaming and entertainment with vibrant HDR1
+
+                    Vertical stand sold separately
+                </p>
+                <button class="btn-2">Buy Now</button>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="console-2">
+            <div class="img-4">
+
+            </div>
+            <div class="text-1">
+                <p>
+                    PlayStation®4 Pro
+                    4K-gaming and entertainment with vibrant HDR1
+
+                    Vertical stand sold separately
+                </p>
+                <button class="btn-2">Buy Now</button>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="console-2">
+            <div class="img-4">
+
+            </div>
+            <div class="text-1">
+                <p>
+                    PlayStation®4 Pro
+                    4K-gaming and entertainment with vibrant HDR1
+
+                    Vertical stand sold separately
+                </p>
+                <button class="btn-2">Buy Now</button>
+            </div>
+        </div>
+
+
+
+ -->
+
+
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-section">
+                <h2 class="logo">GameWizards</h2>
+                <p>Your ultimate destination for the latest gaming consoles in Vashi.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a routerLink="/">Home</a></li>
+                    <li><a routerLink="/about">About Us</a></li>
+                    <li><a routerLink="/console">Gaming Consoles</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>📍 Vashi, Navi Mumbai</p>
+                <p>📞 +91 98765 43210</p>
+                <p>✉ gamewizards@gmail.com</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 GameWizards. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>

@@ -1,0 +1,88 @@
+<div class="navbar">
+
+    <div class="logo">
+        <a routerLink="" id="GameWizard">🛒 Game Wizard</a>
+        <span class="country">INDIA</span>
+    </div>
+
+    <div class="nav-links">
+        <a routerLink="/">Home</a>
+        <a routerLink="/console">Gaming Console</a>
+        <a routerLink="/games">Games</a>
+        <a routerLink="/about">About Us</a>
+    </div>
+
+    <div class="auth-links">
+        @if( isProfile == false){
+        <a routerLink="/login" class="login-btn  hidden-auth">Login</a>
+        <a routerLink="/signup" class="signup-btn  hidden-auth">Signup</a>
+        }
+        @else{
+        <a routerLink="/profile" class="login-btn">&#128100;Profile</a>
+        }
+        <button routerLink="/addtocart" class="login-btn">&#128722;Cart</button>
+    </div>
+
+
+
+</div>
+<hr>
+
+
+
+
+
+
+<div class="cart-page">
+
+    <h1 class="cart-title">🛒 Your Cart</h1>
+
+
+    <div class="cart-container">
+
+       
+    @for(item of cartItems; track item.productId)
+    {
+ <!-- Cart Item -->
+        <div class="cart-item">
+
+            <div class="cart-img">
+                <img [src]="item.imageUrl" alt="Images" >
+            </div>
+
+            <div class="cart-details">
+                <h3>{{item.productName}}</h3>
+                <p>Price: {{item.price}}</p>
+                <p>Description: {{item.description}}</p>
+
+                <div class="quantity">
+                    <button (click)="decreaseQuantity(item)">-</button>
+                    <span>{{item.quantity}}</span>
+                    <button (click)="increaseQuantity(item)">+</button>
+                </div>
+            </div>
+
+            <div class="cart-actions">
+                <button type="button" class="remove-btn" (click)="removeFromCart(item)">Remove</button>
+            </div>
+
+        </div>
+
+    }
+
+       
+       
+
+    </div>
+
+
+    <!-- Cart Summary -->
+    <div class="cart-summary">
+
+        <h2>Total: {{cartTotal}}/- </h2>
+
+        <button type="button"  class="checkout-btn">Proceed to Checkout</button>
+
+    </div>
+
+</div>

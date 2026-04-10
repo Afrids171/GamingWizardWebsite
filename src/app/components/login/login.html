@@ -1,0 +1,55 @@
+<div class="navbar">
+
+    <div class="logo">
+        <a routerLink="" id="GameWizard" >🛒 Game Wizard</a>
+        <span class="country">INDIA</span>
+    </div>
+
+    <div class="nav-links">
+        <a routerLink="/">Home</a>
+        <a routerLink="/console">Gaming Console</a>
+        <a routerLink="/games">Games</a>
+        <a routerLink="/about">About Us</a>
+    </div>
+
+    <div class="auth-links">
+        @if( isProfile == false){
+        <a routerLink="/login" class="login-btn">Login</a>
+        <a routerLink="/signup" class="signup-btn">Signup</a>
+        }
+        @else{
+        <a href="" class="login-btn">&#128100;Profile</a>
+        }
+    </div>
+
+
+
+</div>
+<hr>
+
+<div class="login-wrapper">
+
+    <div class="login-card">
+        <h2 class="login-title">Game Wizard Login 🎮</h2>
+
+        <form>
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email"   [formControl]="email" name="email" placeholder="Enter your email">
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password"   [formControl]="password" name="password" placeholder="Enter your password">
+            </div>
+
+            <button type="button" (click)="Login()" class="login-btn">Login</button>
+
+            <p class="signup-text">
+                Don't have an account?
+                <a routerLink="/signup">Sign Up</a>
+            </p>
+        </form>
+    </div>
+
+</div>
