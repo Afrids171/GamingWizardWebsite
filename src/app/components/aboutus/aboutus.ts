@@ -10,13 +10,12 @@ import { UserService } from '../../Services/user-service';
 })
 export class Aboutus {
 constructor(private UserService: UserService) {}  
-isProfile = false;  
-isLogin = false;
+isProfile = false;
+IsLogin = false;
 ngonInit() 
 {
-    this.isProfile = this.UserService.isProfile;
-    this.isLogin = this.UserService.IsLogin;
-
+   this.isProfile = this.UserService.isProfile
+   this.IsLogin = this.UserService.IsLogin
 }
 
 }

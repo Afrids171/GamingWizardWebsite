@@ -20,8 +20,10 @@
         }
         @else{
         <a routerLink="/profile" class="login-btn">&#128100;Profile</a>
-        }
+        } @if(isLogin == true)
+        {
         <button routerLink="/addtocart" class="login-btn">&#128722;Cart</button>
+        }
     </div>
 
 
@@ -48,7 +50,7 @@
             </div>
             <div class="text-1">
                 <p>Rockstar Games PS5 Video Game ConsoleGrand Theft Auto V</p>
-                <button class="btn-2">Buy Now @1999/-</button>
+                <button class="btn-2" (click)="addToCart()">Buy Now @1999/-</button>
             </div>
         </div>
 

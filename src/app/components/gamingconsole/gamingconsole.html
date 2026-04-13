@@ -20,7 +20,10 @@
         @else{
         <a routerLink="/profile" class="login-btn">&#128100;Profile</a>
         }
+        @if(isLogin == true)
+        {
         <button routerLink="/addtocart" class="login-btn">&#128722;Cart</button>
+        }
     </div>
 
 
@@ -39,7 +42,7 @@
 
     <div class="container-1">
 
-        @for(item of allProducts; track item.productId)
+        @for(item of allProducts(); track item.productId)
         {
         <div class="console-1">
             <div class="img-1">
@@ -77,90 +80,6 @@
         </div>
 
 
-
-
-
-        <div class="console-2">
-            <div class="img-3">
-
-            </div>
-            <div class="text-1">
-                <p>
-                    PlayStation®4
-                    Incredible games live on PS4, with 500GB or 1TB storage.
-
-                    Vertical stand sold separately</p>
-                <button class="btn-2">Buy Now</button>
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-        <div class="console-2">
-            <div class="img-4">
-
-            </div>
-            <div class="text-1">
-                <p>
-                    PlayStation®4 Pro
-                    4K-gaming and entertainment with vibrant HDR1
-
-                    Vertical stand sold separately
-                </p>
-                <button class="btn-2">Buy Now</button>
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-        <div class="console-2">
-            <div class="img-4">
-
-            </div>
-            <div class="text-1">
-                <p>
-                    PlayStation®4 Pro
-                    4K-gaming and entertainment with vibrant HDR1
-
-                    Vertical stand sold separately
-                </p>
-                <button class="btn-2">Buy Now</button>
-            </div>
-        </div>
-
-
-
-
-
-
-
-        <div class="console-2">
-            <div class="img-4">
-
-            </div>
-            <div class="text-1">
-                <p>
-                    PlayStation®4 Pro
-                    4K-gaming and entertainment with vibrant HDR1
-
-                    Vertical stand sold separately
-                </p>
-                <button class="btn-2">Buy Now</button>
-            </div>
-        </div>
-
-
-
  -->
 
 
@@ -187,7 +106,7 @@
             <div class="footer-section">
                 <h3>Contact</h3>
                 <p>📍 Vashi, Navi Mumbai</p>
-                <p>📞 +91 98765 43210</p>
+                <p>📞 +91 8928858366</p>
                 <p>✉ gamewizards@gmail.com</p>
             </div>
 

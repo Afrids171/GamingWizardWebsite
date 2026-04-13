@@ -6,7 +6,7 @@ import { Games } from './components/games/games';
 import { Login } from './components/login/login';
 import { Signup } from './components/signup/signup';
 import { Profile } from './components/profile/profile';
-import { AuthGuard } from './auth-guard';   
+ 
 import { Addtocart } from './components/addtocart/addtocart';
 
 export const routes: Routes = [
@@ -16,7 +16,7 @@ export const routes: Routes = [
     {path:'games',component:Games},
     {path:'login',component:Login},
     {path:'signup',component:Signup},
-    {path:'profile',component:Profile,canActivate: [AuthGuard]},
+    {path:'profile',component:Profile},
     {path:'addtocart',component:Addtocart}
     
    

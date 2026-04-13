@@ -54,23 +54,6 @@ export class Profile {
   }
 
   ProductData = signal<any[]>([]);
-  viewImage() {
-    this.userService.getallproducts().subscribe((resp) => {
-      console.log(resp);
-      this.ProductData.set(resp);
-    })
-
-
-    
-
-
-
-
+ 
   }
 
-
-
-
-
-
-}

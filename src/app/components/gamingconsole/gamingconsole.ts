@@ -1,4 +1,4 @@
-import { Component, OnInit,AfterViewInit } from '@angular/core';
+import { Component, OnInit,AfterViewInit, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { UserService } from '../../Services/user-service';
 
@@ -13,12 +13,12 @@ export class Gamingconsole implements OnInit {
   constructor(private userService: UserService  ) {}
 isProfile = false; 
 isLogin = false;
-  allProducts: any[] = [];  
+  allProducts = signal<any[]>([]) 
   ngOnInit() {
     this.isLogin = this.userService.IsLogin;  
     
         this.userService.getallproducts().subscribe((response) => {
-      this.allProducts = response;
+        this.allProducts.set(response);
       console.log(this.allProducts);
       this.isProfile = this.userService.isProfile;
       this.isLogin = this.userService.IsLogin;

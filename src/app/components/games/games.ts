@@ -11,10 +11,15 @@ import { UserService } from '../../Services/user-service';
 export class Games {
 constructor (private userService : UserService) {} 
 isProfile = false;  
-IsLogin = false;  
+isLogin = false;  
 
 ngOnInit() {  
-this.IsLogin = this.userService.IsLogin;
+this.isLogin = this.userService.IsLogin;
 this.isProfile = this.userService.isProfile;  
+}
+
+addToCart()
+{
+  alert('Game added to cart successfully!');  
 }
 }

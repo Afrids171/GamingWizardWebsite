@@ -11,9 +11,12 @@ import { UserService } from '../../Services/user-service';
 export class Home {
   constructor(private userService: UserService) {}  
  isProfile = false;
+ isLogin = false;
 
  ngOnInit() {
   this.isProfile = this.userService.isProfile;
+  this.isLogin = this.userService.IsLogin;
+  
  }  
 
 }

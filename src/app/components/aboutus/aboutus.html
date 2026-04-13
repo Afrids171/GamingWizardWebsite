@@ -13,16 +13,17 @@
     </div>
 
     <div class="auth-links">
-        @if(isProfile == false){
-        <a routerLink="/login" class="login-btn">Login</a>
-        <a routerLink="/signup" class="signup-btn">Signup</a>
+        @if( isProfile == false){
+        <a routerLink="/login" class="login-btn  hidden-auth " >Login</a>
+        <a routerLink="/signup" class="signup-btn hidden-auth " >Signup</a>
         }
         @else{
         <a routerLink="/profile" class="login-btn">&#128100;Profile</a>
         }
-        <button routerLink="/addtocart" class="login-btn">&#128722;Cart</button>
     </div>
 
+
+ 
 
 
 </div>
@@ -68,10 +69,10 @@
     <h2 class="social-title">Connect With Us</h2>
 
     <div class="social-links">
-        <a href="#" class="social-btn facebook">Facebook</a>
-        <a href="#" class="social-btn instagram">Instagram</a>
+       
+        <a href="https://www.instagram.com/game_wizards_vashi?igsh=bjRvYXkxemVmaWh0" class="social-btn instagram">Instagram</a>
         <a href="http://www.youtube.com/@GAMEWIZARDSVASHI" class="social-btn youtube">YouTube</a>
-        <a href="#" class="social-btn whatsapp">WhatsApp</a>
+        
     </div>
 </section>
 
